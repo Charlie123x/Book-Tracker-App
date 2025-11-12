@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Book Tracker App</title>
+
+</head>
+<body>
+
+<div class="container">
+  <div id="alertBox" class="alert">⚠️ Please input Email and Password</div>
+
+  <!-- Landing Page -->
+  <div id="landingPage">
+    <header><h2>Landing Page</h2></header>
+    <main>
+      <div class="top-links">
+        <a href="#" onclick="showPage('loginPage')">Login</a>
+        <a href="#" onclick="showPage('signupPage')">Sign up</a>
+      </div>
+      <div class="logo">
+        <img src="Logo.png" alt="App Logo">
+        <p>Welcome to Book Tracker App</p>
+      </div>
+    </main>
+    <div class="footer">© 2025 Book Tracker</div>
+  </div>
+
+  <!-- Login Page -->
+  <div id="loginPage" class="hidden">
+    <header><h2>Login Page</h2></header>
+    <main>
+      <p>Welcome back!</p>
+      <input type="email" id="loginEmail" placeholder="Email address" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <label><input type="checkbox" /> Remember me</label>
+      <button onclick="login()">Login</button>
+      <p>Don’t have an account? <a href="#" onclick="showPage('signupPage')">Sign up here</a></p>
+    </main>
+    <div class="footer">© 2025 Book Tracker</div>
+  </div>
+
+  <!-- Sign Up Page -->
+  <div id="signupPage" class="hidden">
+    <header><h2>Sign Up Page</h2></header>
+    <main>
+      <p>Create your account</p>
+      <input type="text" id="signupName" placeholder="Full Name" />
+      <input type="email" id="signupEmail" placeholder="Email address" />
+      <input type="text" id="signupUsername" placeholder="Username" />
+      <input type="password" id="signupPassword" placeholder="Password" />
+      <input type="password" id="signupConfirm" placeholder="Confirm Password" />
+      <button onclick="signup()">Create Account</button>
+      <p>Already have an account? <a href="#" onclick="showPage('loginPage')">Login</a></p>
+      <p>Or sign up with 
+        <a href="https://www.facebook.com/">Facebook</a> or 
+        <a href="https://accounts.google.com/">Google</a>
+      </p>
+    </main>
+    <div class="footer">© 2025 Book Tracker</div>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboardPage" class="hidden">
+    <header><h2>Dashboard</h2></header>
+    <main>
+      <div class="top-links">
+        <button onclick="showPage('landingPage')">Log Out</button>
+      </div>
+      <div class="dashboard-grid">
+        <div class="card">Book 1</div>
+        <div class="card">Book 2</div>
+        <div class="card">Book 3</div>
+        <div class="card">Book 4</div>
+        <div class="card">Book 5</div>
+        <div class="card">Book 6</div>
+        <div class="card">Book 7</div>
+        <div class="card">Book 8</div>
+        <div class="card">Book 9</div>
+      </div>
+    </main>
+    <div class="footer">© 2025 Book Tracker App</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
